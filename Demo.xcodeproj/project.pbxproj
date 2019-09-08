@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		3BE5C60E232573FB00F5C66A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE5C60C232573FB00F5C66A /* LaunchScreen.storyboard */; };
 		3BE5C619232573FB00F5C66A /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C618232573FB00F5C66A /* DemoTests.swift */; };
 		3BE5C624232573FB00F5C66A /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C623232573FB00F5C66A /* DemoUITests.swift */; };
+		3BE5C6562325756B00F5C66A /* StubbornNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE5C6552325756B00F5C66A /* StubbornNetwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE5C6562325756B00F5C66A /* StubbornNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,9 @@
 			dependencies = (
 			);
 			name = Demo;
+			packageProductDependencies = (
+				3BE5C6552325756B00F5C66A /* StubbornNetwork */,
+			);
 			productName = Demo;
 			productReference = 3BE5C5FE232573FA00F5C66A /* Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 3BE5C5F5232573FA00F5C66A;
+			packageReferences = (
+				3BE5C6542325756B00F5C66A /* XCRemoteSwiftPackageReference "the-stubborn-network" */,
+			);
 			productRefGroup = 3BE5C5FF232573FA00F5C66A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -594,6 +602,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3BE5C6542325756B00F5C66A /* XCRemoteSwiftPackageReference "the-stubborn-network" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/q231950/the-stubborn-network.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3BE5C6552325756B00F5C66A /* StubbornNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3BE5C6542325756B00F5C66A /* XCRemoteSwiftPackageReference "the-stubborn-network" */;
+			productName = StubbornNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3BE5C5F6232573FA00F5C66A /* Project object */;
 }
