@@ -16,6 +16,7 @@
 		3BE5C619232573FB00F5C66A /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C618232573FB00F5C66A /* DemoTests.swift */; };
 		3BE5C624232573FB00F5C66A /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C623232573FB00F5C66A /* DemoUITests.swift */; };
 		3BE5C6562325756B00F5C66A /* StubbornNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE5C6552325756B00F5C66A /* StubbornNetwork */; };
+		3BE5C658232576A800F5C66A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C657232576A800F5C66A /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		3BE5C61F232573FB00F5C66A /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE5C623232573FB00F5C66A /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		3BE5C625232573FB00F5C66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE5C657232576A800F5C66A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				3BE5C601232573FA00F5C66A /* AppDelegate.swift */,
 				3BE5C603232573FA00F5C66A /* SceneDelegate.swift */,
 				3BE5C605232573FA00F5C66A /* ContentView.swift */,
+				3BE5C657232576A800F5C66A /* NetworkClient.swift */,
 				3BE5C607232573FB00F5C66A /* Assets.xcassets */,
 				3BE5C60C232573FB00F5C66A /* LaunchScreen.storyboard */,
 				3BE5C60F232573FB00F5C66A /* Info.plist */,
@@ -278,6 +281,7 @@
 				3BE5C602232573FA00F5C66A /* AppDelegate.swift in Sources */,
 				3BE5C604232573FA00F5C66A /* SceneDelegate.swift in Sources */,
 				3BE5C606232573FA00F5C66A /* ContentView.swift in Sources */,
+				3BE5C658232576A800F5C66A /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

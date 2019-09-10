@@ -9,13 +9,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var networkClient: NetworkClient
     var body: some View {
-        Text("Hello World")
+        VStack(content: {
+            Text(networkClient.title).fontWeight(.bold)
+            Text(networkClient.text)
+        }).onAppear {
+            self.networkClient.post()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let urlSession = URLSession(configuration: .ephemeral)
+        let networkClient = NetworkClient(urlSession: urlSession)
+
+        return ContentView(networkClient: networkClient)
     }
 }
