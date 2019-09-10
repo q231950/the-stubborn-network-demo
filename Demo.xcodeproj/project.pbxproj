@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B10325C2327F4DE00347F7B /* StubbornNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 3B10325B2327F4DE00347F7B /* StubbornNetwork */; };
 		3BE5C602232573FA00F5C66A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C601232573FA00F5C66A /* AppDelegate.swift */; };
 		3BE5C604232573FA00F5C66A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C603232573FA00F5C66A /* SceneDelegate.swift */; };
 		3BE5C606232573FA00F5C66A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C605232573FA00F5C66A /* ContentView.swift */; };
@@ -15,7 +16,6 @@
 		3BE5C60E232573FB00F5C66A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE5C60C232573FB00F5C66A /* LaunchScreen.storyboard */; };
 		3BE5C619232573FB00F5C66A /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C618232573FB00F5C66A /* DemoTests.swift */; };
 		3BE5C624232573FB00F5C66A /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C623232573FB00F5C66A /* DemoUITests.swift */; };
-		3BE5C6562325756B00F5C66A /* StubbornNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE5C6552325756B00F5C66A /* StubbornNetwork */; };
 		3BE5C658232576A800F5C66A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C657232576A800F5C66A /* NetworkClient.swift */; };
 		3BE5C65B2327E41D00F5C66A /* XCTestCase+wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C65A2327E41D00F5C66A /* XCTestCase+wait.swift */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BE5C6562325756B00F5C66A /* StubbornNetwork in Frameworks */,
+				3B10325C2327F4DE00347F7B /* StubbornNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +163,7 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
-				3BE5C6552325756B00F5C66A /* StubbornNetwork */,
+				3B10325B2327F4DE00347F7B /* StubbornNetwork */,
 			);
 			productName = Demo;
 			productReference = 3BE5C5FE232573FA00F5C66A /* Demo.app */;
@@ -238,7 +238,7 @@
 			);
 			mainGroup = 3BE5C5F5232573FA00F5C66A;
 			packageReferences = (
-				3BE5C6542325756B00F5C66A /* XCRemoteSwiftPackageReference "the-stubborn-network" */,
+				3B10325A2327F4DE00347F7B /* XCRemoteSwiftPackageReference "the-stubborn-network" */,
 			);
 			productRefGroup = 3BE5C5FF232573FA00F5C66A /* Products */;
 			projectDirPath = "";
@@ -614,7 +614,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3BE5C6542325756B00F5C66A /* XCRemoteSwiftPackageReference "the-stubborn-network" */ = {
+		3B10325A2327F4DE00347F7B /* XCRemoteSwiftPackageReference "the-stubborn-network" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/q231950/the-stubborn-network.git";
 			requirement = {
@@ -625,9 +625,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3BE5C6552325756B00F5C66A /* StubbornNetwork */ = {
+		3B10325B2327F4DE00347F7B /* StubbornNetwork */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3BE5C6542325756B00F5C66A /* XCRemoteSwiftPackageReference "the-stubborn-network" */;
+			package = 3B10325A2327F4DE00347F7B /* XCRemoteSwiftPackageReference "the-stubborn-network" */;
 			productName = StubbornNetwork;
 		};
 /* End XCSwiftPackageProductDependency section */
