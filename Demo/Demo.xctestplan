@@ -1,0 +1,42 @@
+{
+  "configurations" : [
+    {
+      "id" : "C4CC1250-D4A8-40E2-9B70-16B54410B1C8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "environmentVariableEntries" : [
+      {
+        "key" : "PROJECT_DIR",
+        "value" : "$PROJECT_DIR"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Demo.xcodeproj",
+      "identifier" : "3BE5C5FD232573FA00F5C66A",
+      "name" : "Demo"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Demo.xcodeproj",
+        "identifier" : "3BE5C613232573FB00F5C66A",
+        "name" : "DemoTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Demo.xcodeproj",
+        "identifier" : "3BE5C61E232573FB00F5C66A",
+        "name" : "DemoUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

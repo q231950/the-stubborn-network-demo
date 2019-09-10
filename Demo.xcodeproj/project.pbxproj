@@ -17,6 +17,7 @@
 		3BE5C624232573FB00F5C66A /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C623232573FB00F5C66A /* DemoUITests.swift */; };
 		3BE5C6562325756B00F5C66A /* StubbornNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 3BE5C6552325756B00F5C66A /* StubbornNetwork */; };
 		3BE5C658232576A800F5C66A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C657232576A800F5C66A /* NetworkClient.swift */; };
+		3BE5C65B2327E41D00F5C66A /* XCTestCase+wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5C65A2327E41D00F5C66A /* XCTestCase+wait.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		3BE5C623232573FB00F5C66A /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		3BE5C625232573FB00F5C66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BE5C657232576A800F5C66A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		3BE5C6592327E39600F5C66A /* Demo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Demo.xctestplan; path = Demo/Demo.xctestplan; sourceTree = SOURCE_ROOT; };
+		3BE5C65A2327E41D00F5C66A /* XCTestCase+wait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+wait.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		3BE5C600232573FA00F5C66A /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				3BE5C6592327E39600F5C66A /* Demo.xctestplan */,
 				3BE5C601232573FA00F5C66A /* AppDelegate.swift */,
 				3BE5C603232573FA00F5C66A /* SceneDelegate.swift */,
 				3BE5C605232573FA00F5C66A /* ContentView.swift */,
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				3BE5C623232573FB00F5C66A /* DemoUITests.swift */,
+				3BE5C65A2327E41D00F5C66A /* XCTestCase+wait.swift */,
 				3BE5C625232573FB00F5C66A /* Info.plist */,
 			);
 			path = DemoUITests;
@@ -298,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE5C624232573FB00F5C66A /* DemoUITests.swift in Sources */,
+				3BE5C65B2327E41D00F5C66A /* XCTestCase+wait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
