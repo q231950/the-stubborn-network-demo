@@ -13,6 +13,7 @@ struct ContentView: View {
     @ObservedObject var networkClient: NetworkClient
     var body: some View {
         VStack(content: {
+            BuggoBearView()
             Text(networkClient.title).fontWeight(.bold)
             Text(networkClient.text)
         }).onAppear {
