@@ -24,12 +24,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-//        let urlSession = URLSession(configuration: .ephemeral)
-        let urlSession = StubbornNetwork.stubbed { (session) in
-//            session.recordMode = .recording
-
-            let path = URL(string: ProcessInfo().environment["PROJECT_DIR"]!)!
-            session.setupStubSource(name: "ContentView_Previews", path: path)
+        //        let urlSession = URLSession(configuration: .ephemeral)
+        let urlSession = StubbornNetwork.stubbed(withConfiguration: .persistent(name: "ContentView_Previews", path: "\(ProcessInfo().environment["PROJECT_DIR"] ?? "")/stubs")!) { (session) in
+            session.recordMode = .playback
         }
         let networkClient = NetworkClient(urlSession: urlSession)
 

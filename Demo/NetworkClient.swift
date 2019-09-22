@@ -10,22 +10,14 @@ import Foundation
 import Combine
 
 class NetworkClient: ObservableObject {
-    var objectWillChange = PassthroughSubject<NetworkClient, Never>()
-    var text: String = "" {
-        willSet {
-            DispatchQueue.main.async {
-                self.objectWillChange.send(self)
-            }
+    var objectDidChange = PassthroughSubject<NetworkClient, Never>()
+    @Published var text: String = "loading..." {
+        didSet {
+            objectDidChange.send(self)
         }
     }
 
-    var title: String = "" {
-        willSet {
-            DispatchQueue.main.async {
-                self.objectWillChange.send(self)
-            }
-        }
-    }
+    @Published var title: String = ""
 
     let urlSession: URLSession
 
@@ -35,18 +27,19 @@ class NetworkClient: ObservableObject {
 
     func post() {
         title = "Posting to `https://postman-echo.com`"
-        text = "loading..."
 
-        let dataTask = urlSession.dataTask(with: request) { (data, response, error) in
+        let dataTask = urlSession.dataTask(with: NetworkClient.request) { (data, response, error) in
             guard let data = data else {
                 return
             }
-            self.text = data.text
+            DispatchQueue.main.async {
+                self.text = data.text
+            }
         }
         dataTask.resume()
     }
 
-    var request: URLRequest {
+    static var request: URLRequest {
         get {
             var request = URLRequest(url: URL(string: "https://postman-echo.com/post")!)
             request.httpMethod = "POST"

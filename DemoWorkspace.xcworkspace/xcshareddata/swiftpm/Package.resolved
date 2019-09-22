@@ -5,9 +5,9 @@
         "package": "StubbornNetwork",
         "repositoryURL": "https://github.com/q231950/the-stubborn-network.git",
         "state": {
-          "branch": null,
-          "revision": "0cef39e794abd197b46e56fe7fe117d3964cbab0",
-          "version": "0.0.2"
+          "branch": "improve-api",
+          "revision": "c5a7e2557ae1bc4276017b3e5d872a47c4128f23",
+          "version": null
         }
       }
     ]
