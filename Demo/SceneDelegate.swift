@@ -16,15 +16,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let urlSession = URLSession(configuration: .ephemeral)
 
-        //        let urlSession = StubbornNetwork.stubbed { (session) in
-        //                        session.recordMode = .recording
-        //            let env = Environment(processInfo: ProcessInfo())
-        //            if let name = env.stubSourceName, let path = env.stubSourcePath {
-        //                session.setupStubSource(name:name, path: path)
-        //            }
-        //    }
+        let urlSession: URLSession
+        let processInfo = ProcessInfo()
+
+        if processInfo.testing == false {
+            urlSession = URLSession(configuration: .ephemeral)
+        } else {
+            urlSession = StubbornNetwork.makePersistentSession({ (stubbedURLSession) in
+                stubbedURLSession.recordMode = .playback
+            })
+        }
+
         let networkClient = NetworkClient(urlSession: urlSession)
 
         let contentView = ContentView(networkClient: networkClient)
@@ -65,7 +68,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
+}
 
-
+extension ProcessInfo {
+    var testing: Bool {
+        get {
+            return environment["TESTING"] != nil
+        }
+    }
 }
 
