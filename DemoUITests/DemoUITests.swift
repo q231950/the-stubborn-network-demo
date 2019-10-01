@@ -16,7 +16,7 @@ class DemoUITests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        /// Ignore this.
+        /// tell the app that we are executing tests right now
         app.launchEnvironment["TESTING"] = "TESTING"
 
         /// ... each stub's name will be the name of the test case

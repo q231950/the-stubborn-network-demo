@@ -23,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if processInfo.testing == false {
             urlSession = URLSession(configuration: .ephemeral)
         } else {
-            urlSession = StubbornNetwork.stubbed(withProcessInfo: processInfo, stub: { (stubbedURLSession) in
-                stubbedURLSession.recordMode = .recording
+            urlSession = StubbornNetwork.makePersistentSession({ (stubbedURLSession) in
+                stubbedURLSession.recordMode = .playback
             })
         }
 
