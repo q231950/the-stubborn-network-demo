@@ -20,10 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let urlSession: URLSession
         let processInfo = ProcessInfo()
 
+        /// The controversial part I
         if processInfo.testing == false {
             urlSession = URLSession(configuration: .ephemeral)
         } else {
             urlSession = StubbornNetwork.makePersistentSession({ (stubbedURLSession) in
+                /// The controversial part II
                 stubbedURLSession.recordMode = .playback
             })
         }
