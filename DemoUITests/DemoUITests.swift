@@ -29,7 +29,7 @@ class DemoUITests: XCTestCase {
     }
 
     func testBytesText() {
-        /// In the test itself everything happens like with an untempered URLSession
+        /// In the test itself everything happens like with an untampered URLSession
         let bytesText = app.staticTexts["417 bytes"]
         wait(forElement:bytesText, timeout:2)
     }

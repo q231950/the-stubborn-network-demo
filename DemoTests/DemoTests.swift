@@ -19,10 +19,10 @@ class DemoTests: XCTestCase {
         let exp = expectation(description: "Wait for publisher")
 
         /// given
-        let session = StubbornNetwork.makeEphemeralSession({ (stubbedSession) in
-            stubbedSession.stub(NetworkClient.request, data: self.stubData, response: HTTPURLResponse(), error: nil)
+        let session = StubbornNetwork.makeEphemeralSession({ (stubbedSession) in // we make an ephemeral URLSession
+            stubbedSession.stub(NetworkClient.request, data: self.stubData, response: HTTPURLResponse(), error: nil) // and stub individual requests within this closure
         })
-        let networkClient = NetworkClient(urlSession: session)
+        let networkClient = NetworkClient(urlSession: session) // pass the session, fail it for the actual request.
 
         /// when
         networkClient.post()
@@ -44,12 +44,4 @@ class DemoTests: XCTestCase {
                 """.data(using: .utf8)!
         }
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

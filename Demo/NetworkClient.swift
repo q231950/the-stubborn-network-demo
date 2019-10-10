@@ -28,6 +28,7 @@ class NetworkClient: ObservableObject {
     func post() {
         title = "Posting to `https://postman-echo.com`"
 
+        /// this is not perfect Combine, acknowledged
         let dataTask = urlSession.dataTask(with: NetworkClient.request) { (data, response, error) in
             guard let data = data else {
                 return
