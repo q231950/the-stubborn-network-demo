@@ -29,7 +29,7 @@ struct ContentView_Previews: PreviewProvider {
 
         let urlSession = StubbornNetwork.makePersistentSession(withName: "ContentView_Previews", path: "\(ProcessInfo().environment["PROJECT_DIR"] ?? "")/stubs", { (session) in
             /// 2. `.playback` is the default
-            session.recordMode = .playback
+            session.recordMode = .recording
         })
 
         let networkClient = NetworkClient(urlSession: urlSession)

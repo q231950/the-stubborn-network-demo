@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else {
             urlSession = StubbornNetwork.makePersistentSession({ (stubbedURLSession) in
                 /// The controversial part II
-                stubbedURLSession.recordMode = .playback
+                stubbedURLSession.recordMode = .recording
             })
         }
 
