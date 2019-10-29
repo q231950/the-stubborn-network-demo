@@ -22,8 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if processInfo.testing == false {
             urlSession = URLSession(configuration: .ephemeral)
         } else {
+            /// The session is persistent, which means that stubs are stored
             let session = StubbornNetwork.makePersistentSession()
-            session.recordMode = .playback
+
+            /// `.playback` is the default, so after recording you can remove the following line or set it to .playback
+            session.recordMode = .recording
             urlSession = session
         }
 
