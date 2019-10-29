@@ -30,13 +30,13 @@ class DemoUITests: XCTestCase {
 
     func testBytesText() {
         /// In the test itself everything happens like with an untampered URLSession
-        let bytesText = app.staticTexts["417 bytes"]
+        let bytesText = app.staticTexts["415 bytes"]
         wait(forElement:bytesText, timeout:2)
     }
 
     func testMoreBytesText() {
         /// Multiple tests will create multiple json files at the given path.
-        let bytesText = app.staticTexts["417 bytes"]
+        let bytesText = app.staticTexts["415 bytes"]
         wait(forElement:bytesText, timeout:2)
     }
 

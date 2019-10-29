@@ -19,10 +19,10 @@ class DemoTests: XCTestCase {
         let exp = expectation(description: "Wait for publisher")
 
         /// given
-        let session = StubbornNetwork.makeEphemeralSession({ (stubbedSession) in // we make an ephemeral URLSession
-            stubbedSession.stub(NetworkClient.request, data: self.stubData, response: HTTPURLResponse(), error: nil) // and stub individual requests within this closure
-        })
-        let networkClient = NetworkClient(urlSession: session) // pass the session, fail it for the actual request.
+        let session = StubbornNetwork.makeEphemeralSession()
+        session.stub(NetworkClient.request, data: self.stubData, response: HTTPURLResponse(), error: nil) // and stub individual requests
+
+        let networkClient = NetworkClient(urlSession: session)
 
         /// when
         networkClient.post()

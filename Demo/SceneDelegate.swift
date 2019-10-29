@@ -14,7 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         let urlSession: URLSession
@@ -23,9 +22,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if processInfo.testing == false {
             urlSession = URLSession(configuration: .ephemeral)
         } else {
-            urlSession = StubbornNetwork.makePersistentSession({ (stubbedURLSession) in
-                stubbedURLSession.recordMode = .playback
-            })
+            let session = StubbornNetwork.makePersistentSession()
+            session.recordMode = .playback
+            urlSession = session
         }
 
         let networkClient = NetworkClient(urlSession: urlSession)
