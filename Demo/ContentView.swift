@@ -18,7 +18,6 @@ struct ContentView: View {
             Text(networkClient.title).fontWeight(.bold)
             Text(networkClient.text)
         }).onAppear {
-            /// 1. The `post()` method is called when the VStack appears
             self.networkClient.post()
         }
     }
@@ -28,8 +27,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
 
         let urlSession = StubbornNetwork.makePersistentSession(withName: "ContentView_Previews", path: "\(ProcessInfo().environment["PROJECT_DIR"] ?? "")/stubs")
-        /// 2. `.playback` is the default
-        urlSession.recordMode = .playback
+        /// `.playback` is the default, so after recording you can remove the following line or set it to .playback
+        urlSession.recordMode = .recording
 
         let networkClient = NetworkClient(urlSession: urlSession)
 

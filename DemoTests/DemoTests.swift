@@ -18,9 +18,11 @@ class DemoTests: XCTestCase {
     func testExample() {
         let exp = expectation(description: "Wait for publisher")
 
-        /// given
+        /// given we create an ephemeral stubbed session (the scope of the stubs stays within this test)
         let session = StubbornNetwork.makeEphemeralSession()
-        session.stub(NetworkClient.request, data: self.stubData, response: HTTPURLResponse(), error: nil) // and stub individual requests
+
+        /// and stub individual requests
+        session.stub(NetworkClient.request, data: self.stubData, response: HTTPURLResponse(), error: nil)
 
         let networkClient = NetworkClient(urlSession: session)
 
