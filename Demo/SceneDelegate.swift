@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             urlSession = URLSession(configuration: .ephemeral)
         } else {
             let session = StubbornNetwork.makePersistentSession()
-            session.recordMode = .playback
+            session.recordMode = .recording
             urlSession = session
         }
 
